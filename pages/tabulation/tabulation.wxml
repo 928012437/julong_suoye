@@ -1,0 +1,52 @@
+<view>
+<dl class="menu">
+      <dd class="{{subMenuDisplay[0]}}">
+      </dd>
+      <ul class="{{subMenuDisplay[0]}} artl">
+            <li data-index="0" data-text="附近" bindtap="tapSubMenu"><text>附近</text></li>
+            <li data-index="500" data-text="500米内" bindtap="tapSubMenu"><text>500米内</text></li>
+            <li data-index="1000" data-text="1000米内" bindtap="tapSubMenu"><text>1000米内</text></li>
+            <li data-index="2500" data-text="2500米内" bindtap="tapSubMenu"><text>2500米内</text></li>
+            <li data-index="5000" data-text="5000米内" bindtap="tapSubMenu"><text>5000米内</text></li>
+        </ul>
+    
+      <!-- <dd class="{{subMenuDisplay[1]}}">
+      </dd>
+      <ul class="{{subMenuDisplay[1]}} artl">
+            <li data-index="0" data-text="全部分类" bindtap="tapSubMenu2"><text>全部分类</text></li>
+            <li wx:for="{{category}}" wx:key="index" data-text="{{item.catename}}" data-index="{{item.id}}" bindtap="tapSubMenu2"><text>{{item.catename}}</text></li>
+        </ul> -->
+
+      <dd class="{{subMenuDisplay[2]}}">
+      </dd>
+      <ul class="{{subMenuDisplay[2]}} artl">
+            <li data-index="0" data-text="智能排序" bindtap="tapSubMenu3"><text>智能排序</text></li>
+            <li data-index="1" data-text="距离最近" bindtap="tapSubMenu3"><text>距离最近</text></li>
+            <li data-index="2" data-text="最新入驻" bindtap="tapSubMenu3"><text>最新入驻</text></li>
+      </ul>
+</dl>
+   <view class='dtn'>
+      <view class="btm" data-index="0" bindtap="tapMainMenu">{{text1}}</view>
+      <!-- <view  class="btm" data-index="1" bindtap="tapMainMenu">{{text2}}</view> -->
+      <view  class="btm" data-index="2" bindtap="tapMainMenu">{{text3}}</view>
+   </view>
+  <view class='seller'>
+     <text class='seller_text'>推荐商家</text>
+  </view> 
+  <view class='boxer'>
+      <view class='boxs' wx:for="{{show}}" wx:key="index" >
+          <view bindtap='merchtz' data-merchtype="{{item.merchtype}}" data-merchid="{{item.id}}" >
+      <image src="{{item.logo}}" class='imger' ></image>
+        <view class='mober'>
+          <view class='item' >{{item.merchname}}</view>
+          <view class='item' >分类：{{item.catename}}</view>
+        </view>
+          </view>
+        <navigator url='/pages/map/map?id={{item.id}}'>
+        <view class='item_vie'>
+          <image class='item_dis' src="../img/paa.jpg"></image>
+        </view>
+        </navigator>
+      </view>
+  </view>
+</view>

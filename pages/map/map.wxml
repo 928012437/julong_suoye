@@ -1,0 +1,6 @@
+<map id="map" longitude="{{lng}}" latitude="{{lat}}" scale="14" markers="{{markers}}" style="width: 100%; height: 300px;"></map>
+<view class='center'>
+  <view class='wear'>{{waer}}</view>
+  <view class='wears'>{{pohe}}</view>
+  <view class='present'>{{present}}</view>
+</view>

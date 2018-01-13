@@ -1,0 +1,88 @@
+<view class="center">
+  <view class='boxs'>
+    <image class="fromsearch" src="{{fromsearch}}" />
+  </view>
+  <view class='model'>
+    <view class='nameer'>
+      <view class='vertical'>
+        <text class='name'>商户名称：</text> 
+        <text class='dis'>*</text>
+        <view  class='inpt'>
+          <input placeholder="商户名称" bindinput='merchnameinput'></input>
+        </view>
+      </view>
+      <view class='vertical'>
+        <text class='name'>商户类型</text> 
+        <text class='dis'>*</text>
+        <radio-group class="radio-group" bindchange="merchtypeinput">
+        <label class="radio" >
+          <radio value='1' >点餐</radio>
+          <radio value='0' >普通</radio>
+        </label>
+        </radio-group>
+      </view>
+      <view class='vertical'>
+        <text class='name'>主营项目：</text> 
+        <text class='dis'>*</text>
+        <view  class='inpt'>
+          <input placeholder="例如：鞋帽 化妆品等" bindinput='salecateinput'></input>
+        </view>
+      </view>
+      <view class='vertical arte'>
+        <text class='name'>简单介绍：</text> 
+        <text class='dis'></text>
+        <view  class='inpt'>
+          <input placeholder="简单介绍一下商户" bindinput='descinput'></input>
+        </view>
+      </view>
+    </view>
+
+
+
+    <view class='bigBox'>
+      <view class='vertical'>
+        <text class='name'>联系人名：</text> 
+        <text class='dis'>*</text>
+        <view  class='inpt'>
+          <input placeholder="您的姓名" bindinput='realnameinput'></input>
+        </view>
+      </view>
+      <view class='vertical arte'>
+        <text class='name'>手机号码：</text> 
+        <text class='dis'>*</text>
+        <view  class='inpt'>
+          <input placeholder="您的电话" bindinput='mobileinput'></input>
+        </view>
+      </view>
+      <text class='text'>请仔细填写联系方式，保证我们能尽快联系到您~</text>
+    </view>
+
+
+
+<view class='coser'>
+  <view class="page-body">
+    <checkbox class='checkbox' value="" bindtap='forcheck' checked="{{checked}}"></checkbox>
+    <text class='texts' bindtap='forcheck' >我已经阅读并了解了</text>
+    <text class='teter' bindtap='powerDrawer' data-statu="open">【入驻申请协议】</text>
+  </view>
+  <button class='button' bindtap='settled' >立即申请入驻</button>
+</view>
+
+
+
+
+
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_attr_box" wx:if="{{showModalStatus}}">
+ <!--drawer content-->
+ <view class="drawer_content">
+ <import src="/utils/wxParse/wxParse.wxml" />
+ <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+ </view>
+</view>
+
+
+</view>
+</view>

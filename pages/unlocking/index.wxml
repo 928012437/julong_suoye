@@ -1,0 +1,89 @@
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view> 
+<!--content--> 
+<!--使用animation属性指定需要执行的动画--> 
+<view animation="{{animationData}}" class="drawer_attr_box" wx:if="{{showModalStatus}}"> 
+<!--drawer content--> 
+<view class="drawer_content" style='height:{{winHeight}}px'> 
+<view>
+<image class="userinfo-avatar userinfo-avatars" src="{{avatar}}" background-size="cover"></image>
+</view>
+<view class="drawer_box2">
+<view class="drawer_title line" >{{nickname}}</view>
+</view>
+<view class="drawer_box">
+<view class="drawer_title line" bindtap='skip1' >订单管理</view> 
+ <view class="drawer_title line" bindtap='skip2' >锁匠列表</view> 
+</view>
+</view> 
+</view> 
+<!--index.wxml-->
+
+<form bindsubmit="submit_1" report-submit = "true">
+
+<view class="container">  
+  <view class="userinfo">  
+<view bindtap="powerDrawer" data-statu="open">
+<image class="userinfo-avatar" src="{{avatar}}" background-size="cover"></image>
+</view>
+    <!-- <text class="userinfo-nickname">{{userInfo.nickName}}</text>   -->
+    <view class="swiper-tab">  
+      <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">开锁</view>  
+      <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">换锁</view>  
+    </view>  
+  </view> 
+  <view class='bindbooen'>
+    <view class='bindbooen_view'>{{title}}</view>
+  </view>
+  <view class='bindejop' style="height:{{height}}PX;" >
+   <view bindtap='choseadress' class='address' >{{adress}}</view>
+   <image src='../img/11.jpg' class='img' bindtap='initadress'></image>
+  </view>
+  <!-- <view class='bindeapp'>
+    <input class="input" placeholder="输入姓名" value="{{name}}" bindinput="nameinput" />
+  </view> -->
+  <view class='bindeapp bindeapper'>
+    <input class="input inputs" placeholder="输入电话" value="{{tel}}" bindinput="telinput" />
+    <button class='bter' bindtap='sendcode' disabled='{{disabled_2}}' >{{vtext}}</button>
+  </view>
+
+    <view class='bindeapp' wx:if="{{telflag}}" >
+    <input class="input" placeholder="输入验证码" value="{{code}}" bindinput="codeinput" />
+  </view>
+
+    <view class='bindeapp'>
+    <input class="input" placeholder="输入详细地址让师傅更快到达" value="{{xxadress}}" bindinput="xxadressinput" />
+  </view>
+
+<view class='boeser_por'>
+ <view class='boeser'>
+  <button  class="hide{{showView?'show':''}}" bindtap="onChangeShowState">{{showView?'预约':'现在'}}</button>
+  <button class="hide{{showView?'':'show'}}" bindtap="onChangeShowState">{{showView?'预约':'现在'}}</button>
+ </view>
+ <view class="hide{{showView?'show':''}}">
+  <view class="section">  
+    <picker mode="date"  bindchange="bindDateChange">  
+      <view class="picker">  
+        日期: {{dates}}  
+      </view>  
+    </picker>  
+  </view>  
+ </view>
+</view>
+  <button class='btn_jl' disabled='{{disabled_1}}' formType="submit" >立即下单</button>
+  <button class='btn_jl btn_c' bindtap='calling'>人工下单</button>
+</view>
+
+</form>
+
+<form bindsubmit="submit" report-submit = "true">
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-title">确认发送</view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+    <button class="btn-confirm" formType="submit" >确定</button>
+  </view>
+</view>
+</form>
+
+<view style='height:40px;'></view>

@@ -1,0 +1,45 @@
+<view class='boxs'>
+  <view class='box' wx:for="{{list}}" wx:key="">
+    <view class='view'>时间 : {{item.createtime}}</view>
+    <view class='view'>状态 :
+     <text class="{{item.status==0?'t_red':''}}" >未分配</text>->
+     <text class="{{item.status==1?'t_red':''}}" >正在执行</text>->
+     <text class="{{item.status==2?'t_red':''}}" >已完成</text>->
+     <text class="{{item.status==3?'t_red':''}}" >已取消</text>
+     </view>
+    <view class='view'>接单人 : {{item.jmid}}</view>
+    <view class='view'>支付金额 : {{item.price}}</view>
+    <view class='btn_box'>
+      <button class='btn_jl' wx:if="{{item.price==0}}" data-id="{{item.id}}" bindtap="showDialogBtn">支付</button>
+      <button class='btn_jl' wx:if="{{item.price!=0}}" data-id="{{item.id}}" bindtap="showDialogBtn">加付</button>
+      <button class='btn_jl btns' data-id="{{item.id}}" data-content="{{item.content}}" bindtap="showContent">评论</button>
+    </view>
+  </view>
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal||showModal2}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-title">输入金额</view>
+  <view class="modal-content">
+    <view class="modal-input">
+      <input placeholder-class="input-holder" type="number" value="{{money}}" maxlength="10" bindinput="inputChange" class="input" placeholder="请输入金额"></input>
+    </view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+    <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+  </view>
+</view>
+
+<view class="modal-dialog" wx:if="{{showModal2}}">
+  <view class="modal-title">输入评论</view>
+  <view class="modal-content">
+    <view class="modal-input">
+      <input placeholder-class="input-holder" type="text" value="{{content}}" maxlength="10" bindinput="inputChange2" class="input" placeholder="请输入评论"></input>
+    </view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+    <view class="btn-confirm" bindtap="onConfirm2" data-status="confirm">确定</view>
+  </view>
+</view>
+
+</view>

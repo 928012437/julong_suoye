@@ -1,0 +1,245 @@
+/**index.wxss**/  
+.userinfo {  
+  display: flex;  
+  border-bottom: 1px solid #ededed;
+}  
+  
+.userinfo-avatar {  
+  width: 128rpx;  
+  height: 128rpx;  
+  margin: 30rpx;  
+  border-radius: 50%; 
+  float: left;
+  margin-left: 50rpx;
+}  
+.userinfo-nickname {  
+  color: #aaa;  
+}  
+  
+.usermotto {  
+  margin-top: 200px;  
+} 
+/**index.wxss**/  
+.swiper-tab{  
+    width: 60%;  
+    text-align: center;  
+    line-height: 80rpx;
+    float: left;
+    margin-top: 5%;
+}  
+.swiper-tab-list{  
+  font-size: 30rpx;  
+  display: inline-block;  
+  width: 33.33%;  
+  color: #777777;  
+}  
+.on{ 
+  color: #da7c0c;  
+  border-bottom: 5rpx solid #da7c0c;
+}  
+.bindbooen{
+    display: flex;  
+}
+.bindbooen_view{
+  line-height: 100px;
+  width: 100%;
+  text-align: center;
+}
+.input{
+  width: 80%;
+  margin-left: 10%;
+  height: 50px;
+  border-bottom: 1px solid #dddddd;
+}
+.btn_jl{
+  background: #da7c0c;
+  color: #fff;
+  margin-top: 30px;
+  width: 80%;
+}
+.btn_c{
+  margin-top: 20px;
+}
+.bindejop{
+  width: 80%;
+  margin-left: 10%;
+  line-height: 50px;
+  display: flex;
+  font-size:15px;
+
+}
+.img{
+  width: 30px;
+  height: 30px;
+  margin-top: 3%;
+  position: absolute;
+  right: 10%;
+}
+.hide{
+ display: none;
+}
+.show{ 
+ display: block;
+}
+.boeser button{
+  width: 100%;
+  height: 100%;
+  float: left;
+  line-height: 30px;
+  font-size: 14px;
+}
+.hideshow{
+  width: 60%;
+}
+.boeser{
+  height: 50px;
+  width: 100%;
+}
+.boeser_por{
+  display: flex;
+  margin-top: 20px;
+}
+.boeser{
+  width: 20%;
+  height: 30px;
+  margin-left: 10%;
+}
+
+.hideshow{
+  margin-left: 3%;
+}
+.bindeapp{
+  font-size: 16px;
+}
+.address{
+  max-width: 90%;
+}
+
+
+
+
+/*mask*/ 
+.drawer_screen { 
+width: 100%; 
+height: 100%; 
+position: fixed; 
+top: 0; 
+left: 0; 
+z-index: 1000; 
+background: #000; 
+opacity: 0.2; 
+overflow: hidden; 
+} 
+/*content*/ 
+.drawer_attr_box { 
+width: 50%; 
+overflow: hidden; 
+position: fixed; 
+bottom: 0; 
+left: 0; 
+z-index: 1001; 
+background: #fff; 
+} 
+.drawer_content { 
+background-color: rgb(0, 68, 97);
+height: 504px; 
+overflow-y: scroll; 
+} 
+.drawer_title{ 
+padding:20rpx; 
+font:42rpx "microsoft yahei"; 
+text-align: center; 
+border-bottom : 0px;
+color: #fff;
+} 
+.drawer_box{
+margin-top: 70%;
+}
+.drawer_box2{
+margin-top: 50%;
+}
+.userinfo-avatars{
+margin-left:30%;
+}
+.inputs{
+width: 50%;
+}
+.bter{
+background: #da7c0c;
+color: #fff;
+margin-top: 30px;
+width: 24%;
+font-size: 10px;
+padding-left: 5px;
+padding-right: 5px;
+position: absolute;
+left: 65%;
+top: -18%;
+}
+.bindeapper{
+position: relative;
+}
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.modal-dialog {
+  width: 540rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 9999;
+  background: #f9f9f9;
+  margin: -180rpx 105rpx;
+  border-radius: 36rpx;
+}
+
+.modal-title {
+  padding-top:40rpx;
+  padding-bottom:30rpx;
+  font-size: 36rpx;
+  color: #030303;
+  text-align: center;
+}
+
+.modal-content {
+  padding: 50rpx 32rpx;
+}
+
+.modal-input {
+  display: flex;
+  background: #fff;
+  border: 2rpx solid #ddd;
+  border-radius: 4rpx;
+  font-size: 28rpx;
+}
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  height: 86rpx;
+  border-top: 1px solid #dedede;
+  font-size: 34rpx;
+  line-height: 86rpx;
+}
+.btn-cancel {
+  width: 50%;
+  color: #666;
+  text-align: center;
+  border-right: 1px solid #dedede;
+}
+
+.btn-confirm {
+  width: 50%;
+  color: #ec5300;
+  text-align: center;
+}

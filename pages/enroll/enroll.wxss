@@ -1,0 +1,146 @@
+.center{
+  width: 100%;
+  height: 100%;
+}
+.boxs{
+  width: 100%;
+  height: 400rpx;
+}
+.fromsearch{
+  width: 100%;
+  height: 100%;
+}
+.model{
+  width: 100%;
+  height: 1000rpx;
+  background: #fafafa;
+}
+.nameer{
+  float: left;
+  width: 100%;
+  height: 350rpx;
+  background: #fff;
+  margin-top: 40rpx;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+}
+.name{
+  width: 30%;
+  height: 100rpx;
+  float: left;
+  margin-left:2%; 
+  line-height: 100rpx;
+  color: #39333f;
+}
+.dis{
+  width: 6%;
+  float: left;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: red;
+}
+input{
+  width: 100%;
+  height:100%;
+  font-size: 32rpx;
+}
+.inpt{
+  width: 60%;
+  height: 100rpx;
+  float: left;
+  text-align: left;
+}
+.vertical{
+  width: 96%;
+  margin-left: 2%;
+  height: 100rpx;
+  border-bottom: 1px solid #ebebeb;
+}
+.arte{
+  border-bottom:0;
+}
+.bigBox{
+  float: left;
+  width: 100%;
+  height: 280rpx;
+  background: #fff;
+  margin-top: 30rpx;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+}
+.text{
+  width: 90%;
+  font-size: 28rpx;
+  text-align: left;
+  margin-left: -15%;
+  color: #999;
+}
+.coser{
+  float: left;
+  width: 100%;
+  height: 100rpx;
+  background: #fff;
+  margin-top: 30rpx;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+}
+.page-body{
+  text-align: left;
+  margin-left: 50rpx;
+  line-height: 100rpx;
+}
+checkbox .wx-checkbox-input{
+  width: 30rpx;
+  height: 30rpx;
+}
+.texts{
+  width: 90%;
+  font-size: 32rpx;
+  text-align: left;
+  color: #999;
+}
+.teter{
+  width: 90%;
+  font-size: 32rpx;
+  text-align: left;
+  color: blue;
+}
+.button{
+  margin-top: 30rpx;
+  width: 80%;
+  background: #0290c0;
+  color: #fff;
+}
+
+
+
+
+
+
+
+.drawer_screen {
+ width: 100%;
+ height: 100%;
+ position: fixed;
+ top: 0;
+ left: 0;
+ z-index: 1000;
+ background: #000;
+ opacity: 0.2;
+ overflow: hidden;
+}
+/*content*/
+.drawer_attr_box {
+ width: 100%;
+ overflow: hidden;
+ position: fixed;
+ bottom: 300rpx;
+ left: 0;
+ z-index: 1001;
+ background: #fff;
+}
+.drawer_content {
+ padding: 20rpx 40rpx;
+ height: 500rpx;
+ overflow-y: scroll; 
+}
