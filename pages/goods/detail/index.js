@@ -222,6 +222,7 @@ Page({
       e.get("goods/get_detail", {
         id: t.id
       }, function (t) {
+        console.log(t)
         if (s.wxParse("wxParseData", "html", t.goods.content, a, "0"), a.setData({
           show: true,
           goods: t.goods
